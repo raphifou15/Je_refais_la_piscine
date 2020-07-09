@@ -1,0 +1,6 @@
+Credentials cache: API:AF314811-6975-40B2-A2E6-9F36845808E2
+        Principal: rkhelif@42.FR
+
+  Issued                Expires               Principal
+Feb  5 09:05:54 2020  Feb 12 09:05:54 2020  krbtgt/42.FR@42.FR
+Feb  5 09:05:54 2020  Feb 12 09:05:54 2020  HTTP/student-storage-2.42.fr@42.FR
