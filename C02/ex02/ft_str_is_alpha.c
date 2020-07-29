@@ -6,7 +6,7 @@
 /*   By: rkhelif <rkhelif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/29 17:12:36 by rkhelif           #+#    #+#             */
-/*   Updated: 2020/07/29 17:57:28 by rkhelif          ###   ########.fr       */
+/*   Updated: 2020/07/29 18:50:59 by rkhelif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_str_is_alpha(char *str)
 
 	i = -1;
 	if (!(str))
-		return (0);
+		return (1);
 	while ((str[++i]))
 	{
 		if (!((str[i] > 64 && str[i] < 91) || (str[i] > 96 && str[i] < 123)))
