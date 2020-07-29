@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkhelif <rkhelif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/29 19:30:36 by rkhelif           #+#    #+#             */
-/*   Updated: 2020/07/29 20:48:48 by rkhelif          ###   ########.fr       */
+/*   Created: 2020/07/29 20:32:47 by rkhelif           #+#    #+#             */
+/*   Updated: 2020/07/29 20:47:35 by rkhelif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str)
+int	ft_str_is_printable(char *str)
 {
-	if (!(str))
+	if (!(str--))
 		return (1);
-	str--;
 	while (*++str)
 	{
-		if (!(*str > 96 && *str < 123))
+		if (*str > -1 && *str < 32)
 			return (0);
 	}
 	return (1);
