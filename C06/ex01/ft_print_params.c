@@ -6,7 +6,7 @@
 /*   By: rkhelif <rkhelif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/20 22:51:56 by rkhelif           #+#    #+#             */
-/*   Updated: 2020/08/20 23:13:11 by rkhelif          ###   ########.fr       */
+/*   Updated: 2020/08/20 23:15:39 by rkhelif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_print_params(int argc, char **argv, int i)
 		ft_print(argv[i], -1);
 }
 
-int		amain(int argc, char *argv[])
+int		main(int argc, char *argv[])
 {
 	ft_print_params(argc, argv, 0);
 	return (0);
