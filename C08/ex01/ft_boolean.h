@@ -6,7 +6,7 @@
 /*   By: rkhelif <rkhelif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 15:13:43 by rkhelif           #+#    #+#             */
-/*   Updated: 2020/08/26 17:11:37 by rkhelif          ###   ########.fr       */
+/*   Updated: 2020/08/26 22:58:18 by rkhelif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # define ODD_MSG "I have an odd number of arguments."
 # define TRUE 1
 # define FALSE 0
-# define SUCCES 0
+# define SUCCESS 0
 
 typedef int	t_bool;
 # define EVEN(x) (x % 2) == 0 ? TRUE : FALSE
