@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_push_back.c                                :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkhelif <rkhelif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/05 22:16:59 by rkhelif           #+#    #+#             */
-/*   Updated: 2020/10/06 21:31:15 by rkhelif          ###   ########.fr       */
+/*   Created: 2020/10/06 11:30:36 by rkhelif           #+#    #+#             */
+/*   Updated: 2020/10/06 21:25:45 by rkhelif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 
-void	ft_list_push_back(t_list **begin_list, void *data)
+int	main(int argc, char *argv[])
 {
-	t_list	*new;
+	t_list	*list;
 	t_list	*temp;
 
-	new = NULL;
-	new = ft_create_elem(data);
-	if (*begin_list == NULL)
+	list = NULL;
+	temp = NULL;
+	list = ft_list_push_strs(argc, argv);
+	while (list)
 	{
-		*begin_list = new;
-		return ;
+		temp = list;
+		printf("%s\n", list->data);
+		list = list->next;
+		free(temp);
+		temp = NULL;
 	}
-	temp = *begin_list;
-	while (temp->next)
-		temp = temp->next;
-	temp->next = new;
-	new->next = NULL;
+	return (0);
 }

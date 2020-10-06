@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_push_back.c                                :+:      :+:    :+:   */
+/*   ft_list_push_strs.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkhelif <rkhelif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/05 22:16:59 by rkhelif           #+#    #+#             */
-/*   Updated: 2020/10/06 21:31:15 by rkhelif          ###   ########.fr       */
+/*   Created: 2020/10/06 11:51:31 by rkhelif           #+#    #+#             */
+/*   Updated: 2020/10/06 21:16:21 by rkhelif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,18 @@ void	ft_list_push_back(t_list **begin_list, void *data)
 		return ;
 	}
 	temp = *begin_list;
-	while (temp->next)
+	while (temp->next != NULL)
 		temp = temp->next;
 	temp->next = new;
 	new->next = NULL;
+}
+
+t_list	*ft_list_push_strs(int size, char **strs)
+{
+	t_list	*list;
+
+	list = NULL;
+	while (--size > -1)
+		ft_list_push_back(&list, strs[size]);
+	return (list);
 }

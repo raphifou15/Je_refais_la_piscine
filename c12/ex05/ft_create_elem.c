@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_push_back.c                                :+:      :+:    :+:   */
+/*   ft_create_elem.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkhelif <rkhelif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/05 22:16:59 by rkhelif           #+#    #+#             */
-/*   Updated: 2020/10/06 21:31:15 by rkhelif          ###   ########.fr       */
+/*   Created: 2020/10/06 12:01:49 by rkhelif           #+#    #+#             */
+/*   Updated: 2020/10/06 12:04:51 by rkhelif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 
-void	ft_list_push_back(t_list **begin_list, void *data)
+t_list	*ft_create_elem(void *data)
 {
-	t_list	*new;
-	t_list	*temp;
+	t_list	*elem;
 
-	new = NULL;
-	new = ft_create_elem(data);
-	if (*begin_list == NULL)
-	{
-		*begin_list = new;
-		return ;
-	}
-	temp = *begin_list;
-	while (temp->next)
-		temp = temp->next;
-	temp->next = new;
-	new->next = NULL;
+	elem = NULL;
+	if ((elem = malloc(sizeof(*elem))) == NULL)
+		return (NULL);
+	elem->data = data;
+	elem->next = NULL;
+	return (elem);
 }
