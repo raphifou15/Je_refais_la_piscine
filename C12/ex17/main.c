@@ -6,7 +6,7 @@
 /*   By: rkhelif <rkhelif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 23:54:41 by rkhelif           #+#    #+#             */
-/*   Updated: 2020/10/17 21:37:00 by rkhelif          ###   ########.fr       */
+/*   Updated: 2020/10/17 21:46:27 by rkhelif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ int	main(int argc, char *argv[])
 	ft_sorted_list_merge(&list, list2, ft_strcmp);
 	ft_write(list, ft_putstr);
 	ft_list_clear(list, ft_free);
+	return (0);
 }
